@@ -9,7 +9,7 @@ import org.apache.kafka.clients.producer.RecordMetadata;
 import org.apache.kafka.common.serialization.StringSerializer;
 
 /**
- * Simple Kafka Producer. 
+ * Synchronous Kafka Producer. 
  * This is an example for Synchronous Mechanism for Kafka Producer.
  * Here, producer waits for response to receive from broker. 
  *
@@ -20,7 +20,7 @@ public class SynchronousKafkaProducer
 	{
 		final String topic = "MyFirstTopic1";
 		final String key = "Key2";
-		final String value = "Value2";
+		final String value = "Sync_Value2";
 
 		Properties props = new Properties();
 		props.put("bootstrap.servers", "localhost:9092");
