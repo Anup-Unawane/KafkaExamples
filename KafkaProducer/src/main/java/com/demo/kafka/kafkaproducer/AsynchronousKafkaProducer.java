@@ -16,6 +16,12 @@ import org.apache.kafka.common.serialization.StringSerializer;
  * message is sent to broker, this callback mechanism is called with
  * {@link RecordMetadata} and Exception object.
  * 
+ * This mechanism gives throughput as good as Fire and Forget Mechanism.
+ * However, you have limit of inflight messages.This limit is controlled by configuration
+ * parameter: max.in.flight.requests.per.connection
+ * This represents number of messages you can send to server without 
+ * receiving response. Defaults to 5
+ * 
  *
  */
 public class AsynchronousKafkaProducer 
