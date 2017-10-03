@@ -43,7 +43,7 @@ public class SensorProducer
         
         for(int i=0; i< 10; i++)
         {
-        	ProducerRecord<String, String> rec = new ProducerRecord<>(topic, "TSS", "200" + i);
+        	ProducerRecord<String, String> rec = new ProducerRecord<>(topic, "TSS", "300" + i);
         	prod.send(rec);
         }
         
